@@ -1,0 +1,56 @@
+{% extends 'main.html'%}
+
+{% block title %}
+    <title>book_add</title>
+    {% endblock title %}
+
+{% block body %}
+
+<h1 class="text-center my-5">Add Book</h1>
+
+<form method="POST" action="/book_update/{{book.book_id}}">
+  <div class=" mb-3 ">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="Name" name="name" value="{{book.name}}">
+    </div>
+  </div>
+  <div class=" mb-3">
+    <label for="inputPassword6" class="col-sm-2 col-form-label">Author</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPassword6" placeholder="Author" name="author" value="{{book.author}}">
+    </div>
+  </div>
+  <div class=" mb-3 ">
+    <label for="inputEmail7" class="col-sm-2 col-form-label">ISBN</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail7" placeholder="ISBN" name="isbn" value="{{book.isbn}}">
+    </div>
+  </div>
+  <div class=" mb-3">
+    <label for="inputPassword8" class="col-sm-2 col-form-label">Publisher</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPassword8" placeholder="Publisher" name="publisher" value="{{book.publisher}}">
+    </div>
+  </div>
+    <div class=" mb-3">
+    <label for="inputPassword15" class="col-sm-2 col-form-label">Edition</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPassword15" placeholder="Edition" name="edition" value="{{book.edition}}">
+    </div>
+
+  <div class=" mb-3">
+    <label for="inputPassword9" class="col-sm-2 col-form-label">Quantity</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPassword9" placeholder="quantity" name="qty" >
+    </div>
+  </div>
+
+
+  <button type="submit" class="btn btn-primary col-1" style="margin:0;position: absolute;top: 75%;left: 45%;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);">Add</button>
+
+</form>
+
+
+
+{% endblock body %}

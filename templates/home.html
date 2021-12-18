@@ -1,0 +1,92 @@
+
+{% extends 'main.html' %}
+
+{% block title %}
+    <title>Home</title>
+
+      {% endblock title %}
+
+  {% block body %}
+<div class="container-fluid">
+<img  src="{{ url_for('static', filename='/img/lib.jpg') }}" class="img-fluid" style="position:absolute;right:450px;height:950px;width:700px;" >
+
+<div class=" d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"  style="height:950px; width: 280px;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="/"></use></svg>
+      <span class="fs-4">LIBRARY MANAGEMENT APP!</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      {% if current_user.is_authenticated %}
+      <li class="nav-item">
+        <a href="/book_add" class="nav-link text-white" aria-current="page">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="/book_add"></use></svg>
+          Add Book
+        </a>
+      </li>
+      <li>
+        <a href="/student_add" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="/student_add"></use></svg>
+          Add Student
+        </a>
+      </li>
+      <li>
+        <a href="/issue" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="/issue"></use></svg>
+          Issue
+        </a>
+      </li>
+      <li>
+        <a href="/submit" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="/submit"></use></svg>
+          Submit
+        </a>
+      </li>
+      <li>
+        <a href="/display_st" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="/display_st"></use></svg>
+          Display Student list
+        </a>
+      </li>
+      <li>
+        <a href="display_book" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="/display_book"></use></svg>
+          Display Book list
+        </a>
+      </li>
+      <li>
+        <a href="borrow_record" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="/borrow_record"></use></svg>
+          Borrow Records
+        </a>
+      </li>
+      <li>
+        <a href="deposit_record" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="/deposit_record"></use></svg>
+          Deposit Records
+        </a>
+      </li>
+
+      {% else %}
+      <li>
+        <a href="/register" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="/register"></use></svg>
+          Register
+        </a>
+      </li>
+      <li>
+        <a href="/login" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="/login"></use></svg>
+          Log in
+        </a>
+      </li>
+{% endif %}
+    </ul>
+    <hr>
+
+  </div>
+
+</div>
+
+
+  {% endblock body %}

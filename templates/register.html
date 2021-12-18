@@ -1,0 +1,26 @@
+{% extends 'home1.html' %}
+{% block title %}
+    <title>register</title>
+    {% endblock title %}
+
+
+  {% block body %}
+
+<!-- <h1 class="text-center">Registration</h1> -->
+
+<form method="POST" action="/register">
+  <div class="my-2">
+  <div class="mb-3 my-15">
+    <label for="exampleInputEmail10" class="form-label">Username</label>
+    <input type="text" class="form-control" id="exampleInputEmail10" aria-describedby="emailHelp" placeholder="Username" name="uname">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword10" class="form-label">Password</label>
+    <input type="text" class="form-control" id="exampleInputPassword10" placeholder="password" name="password">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+</form>
+
+{% endblock body %}

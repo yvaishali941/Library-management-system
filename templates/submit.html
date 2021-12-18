@@ -1,0 +1,23 @@
+{% extends 'home1.html' %}
+{% block title %}
+    <title>Submit</title>
+    {% endblock title %}
+
+
+  {% block body %}
+<!-- <h1 class="text-center">Book Submit</h1> -->
+
+<form method="POST" action="/submit">
+  <div class="mb-3 my-5">
+    <label for="exampleInputEmail1" class="form-label">Book_id</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Book_id" name="book_id">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Student_id</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Student_id" name="student_id">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock body %}

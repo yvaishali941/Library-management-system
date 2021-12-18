@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block title %}
+    <title>student_detail</title>
+
+      {% endblock title %}
+
+  {% block body %}
+
+Name:{{student.name}}<br>
+{{student.student_id}}<br>
+{{student.branch}}<br>
+{{student.year}}<br>
+{{student.roll_no}}<br>
+{{student.address}}<br>
+{{student.ph_no}}<br>
+{{student.max_issue}}<br>
+{{student.issued_book_id}}
+
+
+
+{% endblock body %}

@@ -1,0 +1,55 @@
+{% extends 'home1.html'%}
+
+{% block title %}
+    <title>student_add</title>
+    {% endblock title %}
+
+{% block body %}
+
+<!-- <h1 class="text-center my-5">Add Student</h1> -->
+
+<form method="POST" action="/student_add">
+  <div class="row mb-3 ">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="Name" name="name">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Branch</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPassword3" placeholder="Branch" name="branch">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputPassword9" class="col-sm-2 col-form-label">Year</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPassword9" placeholder="Year/Sem" name="year">
+    </div>
+  </div>
+  <div class="row mb-3 ">
+    <label for="inputEmail4" class="col-sm-2 col-form-label">Roll No</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail4" placeholder="Roll no" name="roll_no">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputPassword4" class="col-sm-2 col-form-label">Address</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPassword4" placeholder="Address" name="address">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputPassword5" class="col-sm-2 col-form-label">Phone no.</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPassword5" placeholder="Phone No." name="ph_no">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary col-1" style="margin: 0;position: absolute;top: 50%;left: 50%;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);">Add</button>
+
+</form>
+
+
+
+{% endblock body %}
